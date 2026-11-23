@@ -1,8 +1,8 @@
 // 한자 연습장 서비스 워커 — 처음 한 번 접속하면 이후 오프라인에서도 동작합니다.
 // 파일을 수정해 다시 올릴 때는 아래 버전 숫자를 올려 주세요.
-const V = 'hanja-v1';
+const V = 'hanja-v2';
 const CORE = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png',
-  './apple-touch-icon.png', './data.json', './data-grade3.json'];
+  './apple-touch-icon.png', './data.json', './data-grade3.json', './data-idiom.json'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
